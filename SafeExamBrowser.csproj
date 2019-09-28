@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\NAP Locked down browser\SafeExamBrowser.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C00D670-2F60-414F-AFAC-E166EA3BD01A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>SafeExamBrowser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>2.1.1.76</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>SebWindowsClient</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Management" />
+    <Reference Include="Fleck">
+      <HintPath>lib\Fleck.dll</HintPath>
+    </Reference>
+    <Reference Include="IconLib">
+      <HintPath>lib\IconLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="SEBWindowsServiceContracts">
+      <HintPath>lib\SEBWindowsServiceContracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="MetroFramework">
+      <HintPath>lib\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlistCS\Plist.cs" />
+    <Compile Include="PlistCS\plistType.cs" />
+    <Compile Include="PlistCS\PlistDateConverter.cs" />
+    <Compile Include="IntegrityConstants.cs" />
+    <Compile Include="OrientationLockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEBLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEBSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskbarToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEBUIStrings.cs" />
+    <Compile Include="SebPasswordDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SebCloseDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intptr.cs" />
+    <Compile Include="SebApplicationChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEBException.cs" />
+    <Compile Include="SEBNotAllowedToRunEception.cs" />
+    <Compile Include="SebWindowsClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoSelectButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SingleInstanceController.cs" />
+    <Compile Include="SebWindowsClientMain.cs" />
+    <Compile Include="Worker.cs" />
+    <Compile Include="ThreadedDialog.cs" />
+    <Compile Include="WindowChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="WlanUtils\Wlan.cs" />
+    <Compile Include="WlanUtils\SEBWlanNetworkSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WlanUtils\WlanClient.cs" />
+    <Compile Include="XULRunnerCommunication\SEBXULRunnerWebSocketServer.cs" />
+    <Compile Include="UI\Iconextractor.cs" />
+    <Compile Include="UI\SEBWatchToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBReloadBrowserToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBRestartExamToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBOnScreenKeyboardToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\TapTipHandler.cs" />
+    <Compile Include="UI\SEBBatterylifeToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBQuitToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBInputLanguageToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBWlanToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\WlanAPIExtensions.cs" />
+    <Compile Include="UI\SEBToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SEBWorkingAreaHandler.cs" />
+    <Compile Include="DiagnosticsUtils\Logger.cs" />
+    <Compile Include="DesktopUtils\SEBDesktopController.cs" />
+    <Compile Include="DesktopUtils\SEBDesktopWallpaper.cs" />
+    <Compile Include="CryptographyUtils\SEBProtectionController.cs" />
+    <Compile Include="CryptographyUtils\AESThenHMAC.cs" />
+    <Compile Include="ConfigurationUtils\SEBConfigFileManager.cs" />
+    <Compile Include="ConfigurationUtils\GZipByte.cs" />
+    <Compile Include="ConfigurationUtils\SEBSettings.cs" />
+    <Compile Include="ConfigurationUtils\SEBMessageBox.cs" />
+    <Compile Include="ConfigurationUtils\SEBGlobalConstants.cs" />
+    <Compile Include="ConfigurationUtils\chooseFileToUploadPolicies.cs" />
+    <Compile Include="ConfigurationUtils\newBrowserWindowPolicies.cs" />
+    <Compile Include="ConfigurationUtils\sebServicePolicies.cs" />
+    <Compile Include="ConfigurationUtils\browserViewModes.cs" />
+    <Compile Include="ConfigurationUtils\sebPurposePolicies.cs" />
+    <Compile Include="ConfigurationUtils\urlFilterRuleActions.cs" />
+    <Compile Include="ConfigurationUtils\SEBClientInfo.cs" />
+    <Compile Include="ConfigurationUtils\XULRunnerConfig.cs" />
+    <Compile Include="ConfigurationUtils\Prefs.cs" />
+    <Compile Include="ConfigurationUtils\SEBXulRunnerSettings.cs" />
+    <Compile Include="ServiceUtils\OrientationProvider.cs" />
+    <Compile Include="ServiceUtils\InputParamsManager.cs" />
+    <Compile Include="ServiceUtils\SebWindowsServiceHandler.cs" />
+    <Compile Include="ProcessUtils\ProcessInfo.cs" />
+    <Compile Include="ProcessUtils\SEBProcessHandler.cs" />
+    <Compile Include="ProcessUtils\ProcessWatchDog.cs" />
+    <Compile Include="ProcessUtils\SEBWindowHandler.cs" />
+    <Compile Include="ProcessUtils\ForegroundWatchDog.cs" />
+    <Compile Include="ProcessUtils\SEBClipboard.cs" />
+    <Compile Include="ProcessUtils\SEBNotAllowedProcessController.cs" />
+    <Compile Include="BlockShortcutsUtils\SebKeyCapture.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\keyboard.png" />
+    <Resource Include="resources\signalstrength\0.png" />
+    <Resource Include="resources\signalstrength\100.png" />
+    <Resource Include="resources\signalstrength\33.png" />
+    <Resource Include="resources\signalstrength\66.png" />
+    <Resource Include="resources\signalstrength\nointerface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OrientationLockForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="SebApplicationChooserForm.resx" />
+    <EmbeddedResource Include="SebCloseDialogForm.resx" />
+    <EmbeddedResource Include="SEBLoading.resx" />
+    <EmbeddedResource Include="SebPasswordDialogForm.resx" />
+    <EmbeddedResource Include="SEBSplashScreen.resx" />
+    <EmbeddedResource Include="SEBUIStrings.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SebWindowsClientForm.resx" />
+    <EmbeddedResource Include="UI\SEBBatterylifeToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBInputLanguageToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBOnScreenKeyboardToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBQuitToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBReloadBrowserToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBRestartExamToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBWatchToolStripButton.resx" />
+    <EmbeddedResource Include="UI\SEBWlanToolStripButton.resx" />
+    <EmbeddedResource Include="WindowChooser.resx" />
+    <EmbeddedResource Include="WlanUtils\SEBWlanNetworkSelector.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
